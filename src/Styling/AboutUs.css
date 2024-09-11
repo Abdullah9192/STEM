@@ -1,0 +1,108 @@
+/* Desktop styles */
+.about-container {
+  text-align: center;
+  margin-top: 70px;
+}
+
+.header-text h1 {
+  margin-bottom: 20px;
+}
+
+.header-text h4 {
+  margin-bottom: 100px;
+  font-weight: lighter;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 10px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  color: white;
+  border-radius: 10px;
+}
+
+.green-bg {
+  background-color: #79c636;
+}
+
+.lightblue-bg {
+  background-color: #87ceeb;
+}
+
+.client-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.client-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.stars {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: white;
+}
+
+.testimonial {
+  font-size: 10px;
+  text-align: left;
+  margin-left: -220px;
+}
+
+.say {
+  font-size: 13px;
+  margin-left: 140px;
+  margin-top: -26px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr); /* Change to 2 columns */
+    grid-template-rows: repeat(3, auto); /* Change to 3 rows */
+    max-width: 100%; /* Allow the grid to use full width */
+  }
+
+  .testimonial {
+    font-size: 12px; /* Increase font size for better readability */
+    margin-left: 0; /* Reset margin for better alignment */
+  }
+
+  .say {
+    font-size: 14px; /* Increase font size for better readability */
+    margin-left: 0; /* Reset margin for better alignment */
+    margin-top: 10px; /* Adjust margin for better spacing */
+  }
+}
+
+@media (max-width: 480px) {
+  .reviews-grid {
+    grid-template-columns: 1fr; /* Change to 1 column */
+    grid-template-rows: repeat(6, auto); /* Change to 6 rows */
+  }
+
+  .testimonial {
+    font-size: 14px; /* Increase font size for better readability */
+    margin-left: 0; /* Reset margin */
+  }
+
+  .say {
+    font-size: 16px; /* Increase font size for better readability */
+    margin-left: 0; /* Reset margin */
+    margin-top: 10px; /* Adjust margin for better spacing */
+  }
+}

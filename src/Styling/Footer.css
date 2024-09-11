@@ -1,0 +1,161 @@
+/* Existing desktop styles */
+
+.footer-container {
+  width: 100%;
+  height: 300px;
+  background-color: #009be6;
+  color: white;
+  display: flex;
+  justify-content: space-between; /* Distribute space between items */
+  align-items: center; /* Center items vertically */
+  padding: 0 20px; /* Add horizontal padding */
+  box-sizing: border-box; /* Include padding in the total width */
+}
+
+.footer-container .text-container {
+  display: flex;
+  flex-direction: column; /* Stack text vertically */
+  margin-left: 40px; /* Margin on the left side */
+}
+
+.footer-container h2 {
+  font-size: 40px;
+}
+
+.footer-container h4 {
+  font-weight: lighter;
+  margin-top: 5px; /* Space between h2 and h4 */
+}
+
+.show-more-button {
+  background-color: #79c636; /* Green background */
+  color: white; /* White text */
+  border: none; /* Remove default border */
+  border-radius: 25px; /* Rounded corners */
+  padding: 10px 20px; /* Add padding for better size */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Bold text */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+  text-align: center;
+  height: 60px;
+  width: 250px; /* Adjust button width */
+  margin-right: 50px;
+}
+
+.lower-footer {
+  height: 100px;
+  background-color: #79c636;
+  display: flex;
+  align-items: center; /* Center items vertically */
+  padding: 0 20px; /* Add horizontal padding */
+  box-sizing: border-box; /* Include padding in the total width */
+}
+
+.lower-footer h2 {
+  font-size: 30px;
+  color: white;
+  margin-left: 20px; /* Adjust margin for better alignment */
+}
+
+.lower-footer p {
+  margin-top: 60px;
+  margin-left: -80px;
+  color: white;
+}
+
+.lower-footer h4 {
+  color: white;
+  margin-left: 200px;
+  margin-top: 45px;
+  font-weight: lighter;
+}
+
+.lower-footer ul {
+  display: flex;
+  list-style-type: none;
+  gap: 40px;
+  font-size: 20px;
+  margin-left: 45px;
+  color: white;
+  text-decoration: none;
+  margin-top: 39px;
+}
+
+/* Responsive styles */
+
+@media (max-width: 1024px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 20px;
+  }
+  
+  .footer-container .text-container {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .footer-container h2 {
+    font-size: 30px;
+  }
+
+  .footer-container h4 {
+    font-size: 16px;
+  }
+
+  .show-more-button {
+    width: 200px;
+    margin-right: 0;
+    margin-top: 20px;
+  }
+
+  .lower-footer {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    align-items: center;
+  }
+
+  .lower-footer h2,
+  .lower-footer p,
+  .lower-footer h4 {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .lower-footer ul {
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container h2 {
+    font-size: 24px;
+  }
+
+  .footer-container h4 {
+    font-size: 14px;
+  }
+
+  .show-more-button {
+    width: 180px;
+  }
+
+  .lower-footer h2 {
+    font-size: 24px;
+  }
+
+  .lower-footer p,
+  .lower-footer h4 {
+    font-size: 14px;
+  }
+
+  .lower-footer ul {
+    font-size: 18px;
+  }
+}

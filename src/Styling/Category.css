@@ -1,0 +1,164 @@
+/* Existing styles (Desktop View) */
+.category-container {
+  text-align: center;
+  margin-top: 70px;
+  padding-bottom: 50px;
+}
+
+.header-text h1 {
+  margin-bottom: 20px;
+}
+
+.header-text h4 {
+  margin-bottom: 100px;
+  font-weight: lighter;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 60px;
+  margin-bottom: 70px;
+}
+
+.category-box {
+  position: relative;
+  overflow: hidden;
+  background-image: url('../Images/man-2562325_1280.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  border-radius: 20px;
+  color: white;
+  width: 500px;
+  height: 250px;
+  transition: background-color 0.3s ease;
+}
+
+.icon-text-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.small-div {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 50px;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.largediv {
+  display: flex;
+  align-items: center;
+  background-color: rgb(8, 8, 8);
+  border-radius: 50px;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.icondollar {
+  margin-right: 8px;
+  color: green;
+}
+
+.iconcalender {
+  color: white;
+  margin-right: 5px;
+}
+
+.content h1 {
+  font-size: 45px;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 80px;
+}
+
+.content p {
+  font-size: 16px;
+  text-align: left;
+}
+
+.hover-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #79c636;
+  color: rgb(250, 248, 248);
+  z-index: 10;
+  padding: 20px;
+  text-align: left;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.hover-text h2 {
+  font-size: 30px;
+}
+
+.category-box:hover .hover-text {
+  opacity: 1;
+}
+
+a {
+  text-decoration: underline;
+  color: inherit;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.show-more-button {
+  background-color: #79c636;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 50px;
+  width: 180px;
+  position: static;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .categories {
+      grid-template-columns: 1fr; /* 1 Column */
+      max-width: 100%; /* Full width */
+      gap: 15px; /* Reduced gap */
+  }
+
+  .category-box {
+      width: 100%; /* Full width for mobile */
+      height: 200px; /* Adjusted height */
+      padding: 15px; /* Adjusted padding */
+  }
+
+  .content h1 {
+      font-size: 30px; /* Smaller font size */
+      margin-top: 40px; /* Reduced top margin */
+  }
+
+  .content p {
+      font-size: 14px; /* Smaller font size */
+  }
+
+  .show-more-button {
+      width: 150px; /* Reduced width for mobile */
+  }
+}

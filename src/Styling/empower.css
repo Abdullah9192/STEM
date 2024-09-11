@@ -1,0 +1,221 @@
+/* Existing desktop view styles */
+.empower-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  padding-bottom: 150px;
+}
+
+.header-text {
+  margin-bottom: 30px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 Columns */
+  grid-gap: 10px;
+  width: 900px;
+  border-radius: 10px;
+  padding: 10px;
+  justify-items: center; /* Center items horizontally */
+  align-items: start; /* Align items at the top */
+}
+
+.grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #f8faf8; Container background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  overflow: hidden; /* Ensure images don't overflow the container */
+}
+
+.grid-item:hover {
+  transform: scale(1.05);
+}
+
+.grid-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container without stretching */
+  border-radius: 8px;
+}
+
+.grid-text-box {
+  display: flex; /* Use flexbox to align items */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  text-align: center; /* Center text alignment inside the box */
+  width: 100%; /* Make sure the width is set to 100% of its container */
+  height: 100%; /* Make sure the height is set to 100% of its container */
+  padding: 10px; /* Optional padding */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  background-color: #79c636;
+  color: white;
+}
+
+/* Column 1 (Image, Text, Image) */
+.custom-size-1 {
+  grid-column: 1;
+  grid-row: 1; /* Image at the top */
+  width: 200px;
+  height: 110px;
+  align-self: end;
+  margin-bottom: -10px;
+}
+
+.custom-text-1 {
+  grid-column: 1;
+  grid-row: 2; /* Text box below image */
+  width: 200px;
+  height: 110px;
+  align-self: end; /* Align the text box to start */
+  text-align: center;
+  display: block;
+}
+
+.custom-text-1 div {
+  display: flex;
+  flex-direction: column; /* Stack the spans vertically */
+  align-items: center; /* Center the text horizontally */
+}
+
+.custom-text-1 span {
+  display: block; /* Ensure each span is on its own line */
+}
+
+.custom-size-3 {
+  grid-column: 1;
+  grid-row: 3; /* Bottom image */
+  width: 200px; /* Adjust width if needed */
+  height: 110px;
+  align-self: end; 
+}
+
+/* Column 2 (Large Image, Text) */
+.custom-size-2 {
+  grid-column: 2;
+  grid-row: 1 / 3; /* Span two rows */
+  width: 220px;
+  height: 290px;
+}
+
+.custom-text-2 {
+  grid-column: 2;
+  grid-row: 3 / 4;
+  width: 220px;
+  height: 110px;
+  align-self: end; 
+}
+
+.custom-text-2 div {
+  display: flex;
+  flex-direction: column; /* Stack the spans vertically */
+  align-items: center; /* Center the text horizontally */
+}
+
+.custom-text-2 span {
+  display: block; /* Ensure each span is on its own line */
+}
+
+/* Column 3 (Text, Text, Image) */
+.custom-text-3 {
+  grid-column: 3;
+  grid-row: 1 / 2;
+  width: 200px;
+  height: 60px;
+  border-radius: 30px;
+  align-self: end; 
+  margin-top: 80px;
+  background-color:cornflowerblue;
+}
+
+.custom-text-4 {
+  grid-column: 3;
+  grid-row: 2 / 3;
+  width: 200px;
+  height: 110px;
+  align-self: end; 
+}
+
+.custom-size-4 {
+  grid-column: 3;
+  grid-row: 3 / 4;
+  width: 90%;
+  height: 110px;
+}
+
+/* Column 4 (Large Image, Text) */
+.custom-size-5 {
+  grid-column: 4;
+  grid-row: 1 / 3; /* Span two rows */
+  width: 220px;
+  height: 290px;
+}
+
+.custom-text-5 {
+  grid-column: 4;
+  grid-row: 3 / 4;
+  width: 220px;
+  height: 110px;
+  align-self: end; 
+}
+
+.line-break {
+  display: block; /* Force each span to display on a new line */
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .grid-container {
+      width: 100%;
+      grid-template-columns: repeat(3, 1fr); /* 3 Columns for medium screens */
+  }
+
+  .custom-size-2, .custom-size-5 {
+      width: 100%;
+      height: auto;
+  }
+
+  .custom-text-2, .custom-text-5 {
+      width: 100%;
+      height: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .grid-container {
+      grid-template-columns: repeat(2, 1fr); /* 2 Columns for smaller screens */
+  }
+
+  .custom-size-1, .custom-size-3, .custom-size-4 {
+      width: 100%;
+      height: auto;
+  }
+
+  .custom-text-1, .custom-text-4 {
+      width: 100%;
+      height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+      grid-template-columns: 1fr; /* 1 Column for very small screens */
+  }
+
+  .custom-size-1, .custom-size-2, .custom-size-3, .custom-size-4, .custom-size-5 {
+      width: 100%;
+      height: auto;
+  }
+
+  .custom-text-1, .custom-text-2, .custom-text-3, .custom-text-4, .custom-text-5 {
+      width: 100%;
+      height: auto;
+  }
+}

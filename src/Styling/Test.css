@@ -1,0 +1,168 @@
+/* Desktop styles */
+.consultant-carousel {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9f9f9;
+  position: relative; /* Make sure this is relative to contain the absolute positioning */
+  padding-bottom: 180px;
+  text-align: center;
+}
+
+.header-text h1 {
+  margin-bottom: 20px;
+}
+
+.header-text h4 {
+  margin-bottom: 100px;
+  font-weight: lighter;
+}
+
+.consultant-slider {
+  display: flex;
+  width: max-content;
+  animation: scroll 120s linear infinite;
+}
+
+.consultant-card {
+  min-width: 300px;
+  margin: 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8faf8;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.consultant-image img {
+  width: 300px;
+  height: 190px;
+  border-radius: 15px;
+  margin: 10px 0;
+  border: 1px solid #79c636;
+}
+
+.consultant-details {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+}
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.consultant-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  text-align: left;
+}
+
+.consultant-development {
+  font-weight: lighter;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.right-section {
+  text-align: right;
+}
+
+.social-media-profile {
+  font-weight: lighter;
+  font-size: 14px;
+}
+
+.social-media-icons {
+  color: green;
+  margin-top: 5px;
+}
+
+.social-media-icons i {
+  margin-right: 10px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.show-more-button {
+  background-color: #79c636;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 220px;
+  margin: 20px 0; /* Margin to create space above and below the button */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .consultant-card {
+    min-width: 250px; /* Adjust width for smaller screens */
+    margin: 0 10px; /* Reduced margin between cards */
+  }
+
+  .consultant-image img {
+    width: 250px; /* Adjust image width for smaller screens */
+    height: 150px; /* Adjust image height for smaller screens */
+  }
+
+  .consultant-details {
+    flex-direction: column; /* Stack text sections vertically on smaller screens */
+    align-items: center; /* Center align text */
+    text-align: center; /* Center text alignment */
+  }
+
+  .left-section, .right-section {
+    width: 100%; /* Full width sections */
+    text-align: center; /* Center align text */
+  }
+
+  .show-more-button {
+    width: 100%; /* Full width button on smaller screens */
+    padding: 15px; /* Increase padding for better touch target */
+    font-size: 18px; /* Increase font size for readability */
+  }
+
+  .button-container {
+    top: 250px; /* Adjust button position for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .consultant-card {
+    min-width: 200px; /* Further reduce width for very small screens */
+    margin: 0 5px; /* Further reduce margin between cards */
+  }
+
+  .consultant-image img {
+    width: 200px; /* Further adjust image width */
+    height: 120px; /* Further adjust image height */
+  }
+
+  .show-more-button {
+    padding: 12px; /* Slightly reduced padding for very small screens */
+    font-size: 16px; /* Adjust font size */
+  }
+
+  .button-container {
+    top: 200px; /* Adjust button position for very small screens */
+  }
+}
